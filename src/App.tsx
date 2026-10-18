@@ -49,7 +49,7 @@ function HomePage({ category, setCategory, searchTerm, visibleVideos, isLoading 
   isLoading?: boolean
 }) {
   return <>
-    {videos.length > 0 && <div className="category-bar" aria-label="動画カテゴリ">{categories.map(item => <button key={item} className={`category-chip ${category === item ? 'selected' : ''}`} type="button" aria-pressed={category === item} onClick={() => setCategory(item)}><span>{item}</span></button>)}</div>}
+    {videos.length > 0 && <div className="category-bar" aria-label="動画カテゴリ">{categories.map(item => <button key={item} className={`category-chip ${category === item ? 'selected' : ''}`} type="button" aria-pressed={category === item} onClick={() => setCategory(item)}>{item}</button>)}</div>}
     {isLoading ? <div className="video-grid" role="status" aria-label="動画を読み込み中">
       {Array.from({ length: 6 }, (_, index) => <VideoCardSkeleton key={index} />)}
     </div> : videos.length === 0 ? <section className="empty-state library-empty-state" aria-labelledby="library-empty-title">
