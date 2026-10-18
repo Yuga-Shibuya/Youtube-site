@@ -1,5 +1,11 @@
 # React + TypeScript + Vite
 
+## GitHub Pages へのデプロイ
+
+`npm run deploy` でビルドし、生成した `dist` を `gh-pages` ブランチへ送信します。
+GitHub の Settings → Pages で公開元を `gh-pages` ブランチの `/` に設定してください。
+非公開リポジトリから GitHub Pages を公開するには、対応する GitHub プランが必要です。
+
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
 Currently, two official plugins are available:
